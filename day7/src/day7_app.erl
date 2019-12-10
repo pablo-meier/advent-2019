@@ -19,7 +19,6 @@
 
 start() ->
     PhaseSettings = make_phase_settings([0,1,2,3,4]),
-
     43210 = sequence_run_on([4,3,2,1,0], array:from_list([3,15,3,16,1002,16,10,16,1,16,15,15,4,15,99,0,0])),
     43210 = solve_for_instructions(array:from_list([3,15,3,16,1002,16,10,16,1,16,15,15,4,15,99,0,0]), PhaseSettings, fun sequence_run_on/2),
     54321 = sequence_run_on([0,1,2,3,4], array:from_list([3,23,3,24,1002,24,10,24,1002,23,-1,23,101,5,23,23,1,24,23,23,4,23,99,0,0])),
